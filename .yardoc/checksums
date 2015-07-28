@@ -1,0 +1,4 @@
+lib/printnode.rb 0d0f92d0e03ab79d66958726e6016bcac57c3c99
+lib/printnode/auth.rb 44382ec29f5d29330be586e06248733ed514fb79
+lib/printnode/client.rb c7f5779b504a03cc2c5046a9ffcf2ef07926f2a6
+lib/printnode/api_exception.rb 55b55afe8d5c06304ee56bd8fb60386d3b42b543
