@@ -47,7 +47,7 @@ class Computers_Test < Test::Unit::TestCase
 		options["options"] = {"bin" => "1"}
 		options["qty"] = 1
 		created_printjob = @client.create_printjob(a_printer_id,"PrintNode-Ruby Print","pdf_uri","https://a_pdf.pdf","PrintNode-Ruby",options)
-		assert_instance_of(String,created_printjob,"created_printjob did not return a String.")
+		assert_instance_of(Fixnum,created_printjob,"created_printjob did not return a Fixnum..")
 	end
 
 end

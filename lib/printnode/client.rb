@@ -11,6 +11,13 @@ module PrintNode
 	# @author PrintNode
 	class Client
 
+		def escape_with_types(obj)
+			if not obj.is_a?(String)
+				obj = obj.to_s
+			end
+			return CGI.escape(obj)
+		end
+
 		attr_reader :headers
 		# Initializes auth object, api url and headers.
 		#
@@ -227,8 +234,7 @@ module PrintNode
 		# Sends a PATCH request to /account/.
 		#
 		# @option options [String] :firstname new Firstname of user.
-		# @option options [String] :lastname new Lastname of user.
-		# @option options [String] :password new Password of user.
+		# @option options [String] :lastname new Last+"]")[0]ions [String] :password new Password of user.
 		# @option options [String] :email new Email of user.
 		# @option options [String] :creatorRef new creator reference of user.
 		#
@@ -257,7 +263,7 @@ module PrintNode
 		# == Returns:
 		# A string which is the value of the tag requested.
 		def tags(tag_name)
-			return get("/account/tag/"+CGI.escape(tag_name)).body.gsub!(/"/,'').gsub!(/\n/,'')
+			return JSON.parse("["+get("/account/tag/"+escape_with_types(tag_name)).body+"]")[0]
 		end
 
 		# Sends a POST request to /account/tag/(tag_name).
@@ -267,7 +273,7 @@ module PrintNode
 		# == Returns:
 		# If this creates a tag, a String "created" will be returned. If it updates one, "updated" will be returned.
 		def set_tag(tag_name,tag_value)
-			return post("/account/tag/"+CGI.escape(tag_name),tag_value).body.gsub!(/"/,'').gsub!(/\n/,'')
+			return JSON.parse("["+post("/account/tag/"+escape_with_types(tag_name),tag_value).body+"]")[0]
 		end
 
 		# Sends a DELETE request to /account/tag/(tag_name).
@@ -275,7 +281,7 @@ module PrintNode
 		# == Returns:
 		# A boolean of whether the tag was deleted or not.
 		def delete_tag?(tag_name)
-			return delete("/account/tag/"+CGI.escape(tag_name)).body
+			return delete("/account/tag/"+escape_with_types(tag_name)).body
 		end
 
 		# Sends a GET request to /account/apikey/(description).
@@ -285,7 +291,7 @@ module PrintNode
 		# == Returns:
 		# The API-Key itself.
 		def apikeys(description)
-			return get("/account/apikey/"+CGI.escape(description)).body.gsub!(/"/,'').gsub!(/\n/,'')
+			return JSON.parse("["+get("/account/apikey/"+escape_with_types(description)).body+"]")[0]
 		end
 
 		# Sends a POST request to /account/apikey/(description).
@@ -295,7 +301,7 @@ module PrintNode
 		# == Returns:
 		# The API-Key that was created.
 		def create_apikey(description)
-			return post("/account/apikey/"+CGI.escape(description)).body.gsub!(/"/,'').gsub!(/\n/,'')
+			return JSON.parse("["+post("/account/apikey/"+escape_with_types(description)).body+"]")[0]
 		end
 
 		# Sends a DELETE request to /account/apikey/(description).
@@ -305,7 +311,7 @@ module PrintNode
 		# == Returns:
 		# A boolean of whether the API-Key was deleted or not.
 		def delete_apikey?(description)
-			return delete("/account/apikey/"+CGI.escape(description)).body
+			return delete("/account/apikey/"+escape_with_types(description)).body
 		end
 
 		# Sends a GET request to /client/key/(uuid)?edition=(edition)&version=(version)
@@ -317,7 +323,7 @@ module PrintNode
 		# == Returns:
 		# The Client-key that was gotten.
 		def clientkeys(uuid,edition,version)
-			return get("/client/key/"+CGI.escape(uuid)+"?edition="+CGI.escape(edition)+"&version="+CGI.escape(version)).body.gsub!(/"/,'').gsub!(/\n/,'')
+			return JSON.parse("["+get("/client/key/"+escape_with_types(uuid)+"?edition="+escape_with_types(edition)+"&version="+escape_with_types(version)).body+"]")[0]
 		end
 
 		# Sends a GET request to /download/client/(os)
@@ -328,7 +334,7 @@ module PrintNode
 		# An OpenStruct object of the response. The design of this Object will be the same as the ones on the PrintNode API docs.
 		# @see https://www.printnode.com/docs/api/curl/#account-download-management Client Downloads on API Docs
 		def latest_client(os="windows")
-			return OpenStruct.new JSON.parse(get("/download/client/"+CGI.escape(os.downcase)).body)
+			return OpenStruct.new JSON.parse(get("/download/client/"+escape_with_types(os.downcase)).body)
 		end
 
 		# Sends a GET request to /download/clients/(client_set)
@@ -339,7 +345,7 @@ module PrintNode
 		# An Array of OpenStruct objects. The design of this Object will be the same as the ones on the PrintNode API docs.
 		# @see https://www.printnode.com/docs/api/curl/#account-download-management Client Downloads on API Docs
 		def clients(client_set="")
-			response_object = JSON.parse(get("/download/clients/"+CGI.escape(client_set)).body)
+			response_object = JSON.parse(get("/download/clients/"+escape_with_types(client_set)).body)
 			return parse_array_to_struct(response_object)
 		end
 
@@ -352,7 +358,7 @@ module PrintNode
 		# An Array of ints that are ids that were changed.
 		def modify_client_downloads(client_set,enabled)
 			hash = {"enabled" => enabled}
-			return JSON.parse(patch("/download/clients/"+CGI.escape(client_set),hash).body)
+			return JSON.parse(patch("/download/clients/"+escape_with_types(client_set),hash).body)
 		end
 
 		# Sends a GET request to /computers/(computer_set)
@@ -363,12 +369,12 @@ module PrintNode
 		# An Array of OpenStruct objects. The design of this Object will be the same as the ones on the PrintNode API docs.
 		# @see https://www.printnode.com/docs/api/curl/#computers Computers on API Docs
 		def computers(computer_set="")
-			response_object = JSON.parse(get("/computers/"+CGI.escape(computer_set)).body)
+			response_object = JSON.parse(get("/computers/"+escape_with_types(computer_set)).body)
 			return parse_array_to_struct(response_object)
 		end
 
 		def scales(computer_id)
-			response_object = JSON.parse(get("/computer/"+CGI.escape(computer_id)+"/scales/").body)
+			response_object = JSON.parse(get("/computer/"+escape_with_types(computer_id)+"/scales/").body)
 			return parse_array_to_struct(response_object)
 		end
 		# Sends a GET request to /printers/(set_a), or:
@@ -383,9 +389,9 @@ module PrintNode
 		# @see https://www.printnode.com/docs/api/curl/#printers Printers on API Docs
 		def printers(set_a="",set_b=nil)
 			if(set_b)
-				end_point_url = "/computers/"+CGI.escape(set_a)+"/printers/"+CGI.escape(set_b)
+				end_point_url = "/computers/"+escape_with_types(set_a)+"/printers/"+escape_with_types(set_b)
 			else
-				end_point_url = "/printers/"+CGI.escape(set_a)
+				end_point_url = "/printers/"+escape_with_types(set_a)
 			end
 			response_object = JSON.parse(get(end_point_url).body)
 			return parse_array_to_struct(response_object)
@@ -403,9 +409,9 @@ module PrintNode
 		# @see https://www.printnode.com/docs/api/curl/#printjob-viewing PrintJobs on API Docs
 		def printjobs(set_a="",set_b=nil)
 			if(set_b)
-				end_point_url = "/printers/"+CGI.escape(set_a)+"/printjobs/"+CGI.escape(set_b)
+				end_point_url = "/printers/"+escape_with_types(set_a)+"/printjobs/"+escape_with_types(set_b)
 			else
-				end_point_url = "/printjobs/"+CGI.escape(set_a)
+				end_point_url = "/printjobs/"+escape_with_types(set_a)
 			end
 			response_object = JSON.parse(get(end_point_url).body)
 			return parse_array_to_struct(response_object)
@@ -440,7 +446,7 @@ module PrintNode
 					hash[k] = v
 				end
 			end
-			return post("/printjobs/",hash).body.gsub(/\n/,'')
+			return JSON.parse("["+post("/printjobs/",hash).body+"]")[0]
 		end
 
 		# sends a GET request to /printjobs/(printjob_set)/states
@@ -451,7 +457,7 @@ module PrintNode
 		# An Array of OpenStruct objects. The design of this Object will be the same as the ones on the PrintNode API docs.
 		# @see https://www.printnode.com/docs/api/curl/#printjob-states PrintJob states on API Docs
 		def states(printjob_set="")
-			printjob_set == "" ? end_point_url="/printjobs/states/" : end_point_url="/printjobs/"+CGI.escape(printjob_set)+"/states/"
+			printjob_set == "" ? end_point_url="/printjobs/states/" : end_point_url="/printjobs/"+escape_with_types(printjob_set)+"/states/"
 			response_object = JSON.parse(get(end_point_url).body)
 			return parse_array_to_struct(response_object)
 		end
