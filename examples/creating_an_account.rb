@@ -3,21 +3,24 @@ require 'printnode'
 #Firstly we'll create a new Auth object, and set our credentials using it.
 #Here, we are authenticating with an API-Key, but we can also authenticate by putting an email and password as arguments:
 #(auth = PrintNode::Auth.new("MyEmail@Emailprovider.com","MyPasswordForPrintNode"))
-auth = PrintNode::Auth.new("god")
+auth = PrintNode::Auth.new("MyAuth")
 
 
 #Now, we'll create a client with our new credentials.
-client = PrintNode::Client.new(auth,"https://apidev.printnode.com")
+client = PrintNode::Client.new(auth)
 
 #Now that we've created a client, let's build some objects for our new account.
 options = {} # This is for an options = {} argument in create_account.
 
-options["creatorRef"] = "OurCreatorRef"
 options["ApiKeys"] = ["dev"]
 options["Tags"] = {"likes" => "PrintNode"}
 
+#We have to make an account object to put in our client.
+child_account_info = PrintNode::Account.new("A","Person","MyEmail@Emailprovider.com","AStrongPassword")
+child_account_info.creator_ref = "MyCreatorRef"
+
 #We can now create our account using PrintNode::Client.create_account.
-child_info = client.create_account("A","Person","MyEmail@Emailprovider.com","AStrongPassword",options)
+child_info = client.create_account(child_account_info,options)
 
 #Let's make a new client for the Child Account.
 child_client = PrintNode::Client.new(auth)
