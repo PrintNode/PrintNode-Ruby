@@ -2,7 +2,6 @@ require 'test/unit'
 require 'printnode'
 
 class Computers_Test < Test::Unit::TestCase
-
   def setup
     @auth = PrintNode::Auth.new("MyAuth")
     @client = PrintNode::Client.new(@auth)
@@ -51,4 +50,9 @@ class Computers_Test < Test::Unit::TestCase
     assert_instance_of(Fixnum,created_printjob,"created_printjob did not return a Fixnum..")
   end
 
+  def test_scales
+    my_scales = @client.scales(0)
+    a_scale = my_scales[0]
+    assert_instance_of(Fixnum,a_scale.measurement.g,"Scale did not have measurements for grams.")
+  end
 end
