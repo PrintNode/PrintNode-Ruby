@@ -14,7 +14,7 @@ This quick start guide covers using the Ruby API Library. There are examples to 
 ###Installing from rubygems
 Simply install via `gem install printnode` with root privileges.
 
-###Building and installing the gem
+###Building and installing from gemspec
 Firstly, you need to build the gem via:
 ```bash
 gem build printnode.gemspec
