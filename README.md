@@ -18,6 +18,9 @@ gem build printnode.gemspec
 ```
 Then install it via `gem install printnode-0.0.1.gem` with root privaleges.
 
+###Installing from rubygems
+Simply install via `gem install printnode` with root privaleges.
+
 ##Quick Start
 
 Firstly, make sure you require the library when using the code:
