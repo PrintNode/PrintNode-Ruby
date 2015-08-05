@@ -16,10 +16,10 @@ Firstly, you need to build the gem via:
 ```bash
 gem build printnode.gemspec
 ```
-Then install it via `gem install printnode-0.0.1.gem` with root privaleges.
+Then install it via `gem install printnode-0.0.1.gem` with root privileges.
 
 ###Installing from rubygems
-Simply install via `gem install printnode` with root privaleges.
+Simply install via `gem install printnode` with root privileges.
 
 ##Quick Start
 
