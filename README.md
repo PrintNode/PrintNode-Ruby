@@ -19,7 +19,7 @@ Firstly, you need to build the gem via:
 ```bash
 gem build printnode.gemspec
 ```
-Then install it via `gem install printnode-0.0.1.gem` with root privileges.
+Then install it via `gem install printnode-X.X.X.gem` with root privileges.
 
 ##Quick Start
 
