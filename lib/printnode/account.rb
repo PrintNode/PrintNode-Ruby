@@ -1,4 +1,7 @@
 module PrintNode
+  # An object to deal with Account Creation.
+  # @author Jake Torrance
+  # @author PrintNode
   class Account
     attr_accessor :firstname
     attr_accessor :lastname
@@ -6,6 +9,7 @@ module PrintNode
     attr_accessor :password
     attr_accessor :creator_ref
 
+    # Map our object into a hash for JSON Encoding.
     def to_hash
       hash = {}
       hash['firstname'] = @firstname
@@ -16,6 +20,7 @@ module PrintNode
       hash
     end
 
+    # Initialize our object ready for being mapped into a hash.
     def initialize(firstname, lastname, email, password)
       @firstname = firstname
       @lastname = lastname

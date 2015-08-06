@@ -142,6 +142,40 @@
 
 
 
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#headers-instance_method" title="#headers (instance method)">- (Object) <strong>headers</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute headers.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
 
 
 
@@ -277,7 +311,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#clients-instance_method" title="#clients (instance method)">- (Object) <strong>clients</strong>(client_set = &quot;&quot;) </a>
+      <a href="#clients-instance_method" title="#clients (instance method)">- (Object) <strong>clients</strong>(client_set = &#39;&#39;) </a>
     
 
     
@@ -301,7 +335,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#computers-instance_method" title="#computers (instance method)">- (Object) <strong>computers</strong>(computer_set = &quot;&quot;) </a>
+      <a href="#computers-instance_method" title="#computers (instance method)">- (Object) <strong>computers</strong>(computer_set = &#39;&#39;) </a>
     
 
     
@@ -325,7 +359,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create_account-instance_method" title="#create_account (instance method)">- (Object) <strong>create_account</strong>(firstname, lastname, email, password, options = {}) </a>
+      <a href="#create_account-instance_method" title="#create_account (instance method)">- (Object) <strong>create_account</strong>(account, options = {}) </a>
     
 
     
@@ -373,7 +407,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create_printjob-instance_method" title="#create_printjob (instance method)">- (Object) <strong>create_printjob</strong>(printerId, title, contentType, content, source, options = {}) </a>
+      <a href="#create_printjob-instance_method" title="#create_printjob (instance method)">- (Object) <strong>create_printjob</strong>(printjob, options = {}) </a>
     
 
     
@@ -493,6 +527,31 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#escape_with_types-instance_method" title="#escape_with_types (instance method)">- (Object) <strong>escape_with_types</strong>(obj) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If an argument is not a string, map it to a string so it can be escaped and
+put into a URL.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#get-instance_method" title="#get (instance method)">- (Object) <strong>get</strong>(end_point_url) </a>
     
 
@@ -541,7 +600,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Client) <strong>initialize</strong>(auth, api_url = &quot;https://api.printnode.com&quot;) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Client) <strong>initialize</strong>(auth, api_url = &#39;https://api.printnode.com&#39;) </a>
     
 
     
@@ -567,7 +626,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#latest_client-instance_method" title="#latest_client (instance method)">- (Object) <strong>latest_client</strong>(os = &quot;windows&quot;) </a>
+      <a href="#latest_client-instance_method" title="#latest_client (instance method)">- (Object) <strong>latest_client</strong>(os = &#39;windows&#39;) </a>
     
 
     
@@ -735,7 +794,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#printers-instance_method" title="#printers (instance method)">- (Object) <strong>printers</strong>(set_a = &quot;&quot;, set_b = nil) </a>
+      <a href="#printers-instance_method" title="#printers (instance method)">- (Object) <strong>printers</strong>(set_a = &#39;&#39;, set_b = nil) </a>
     
 
     
@@ -760,7 +819,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#printjobs-instance_method" title="#printjobs (instance method)">- (Object) <strong>printjobs</strong>(set_a = &quot;&quot;, set_b = nil) </a>
+      <a href="#printjobs-instance_method" title="#printjobs (instance method)">- (Object) <strong>printjobs</strong>(set_a = &#39;&#39;, set_b = nil) </a>
     
 
     
@@ -799,7 +858,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Sends a GET request to /computer/(computer_id)/scales.</p>
+</div></span>
   
 </li>
 
@@ -831,7 +892,31 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#states-instance_method" title="#states (instance method)">- (Object) <strong>states</strong>(printjob_set = &quot;&quot;) </a>
+      <a href="#start_response-instance_method" title="#start_response (instance method)">- (Object) <strong>start_response</strong>(request, uri) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a response object out of a Net::HTTP::(request method).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#states-instance_method" title="#states (instance method)">- (Object) <strong>states</strong>(printjob_set = &#39;&#39;) </a>
     
 
     
@@ -909,7 +994,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="PrintNode::Client (class)">Client</a></span></tt>) <strong>initialize</strong>(auth, api_url = &quot;https://api.printnode.com&quot;) 
+    - (<tt><span class='object_link'><a href="" title="PrintNode::Client (class)">Client</a></span></tt>) <strong>initialize</strong>(auth, api_url = &#39;https://api.printnode.com&#39;) 
   
 
   
@@ -951,7 +1036,7 @@
         <span class='type'>(<tt>String</tt>)</span>
       
       
-        <em class="default">(defaults to: <tt>&quot;https://api.printnode.com&quot;</tt>)</em>
+        <em class="default">(defaults to: <tt>&#39;https://api.printnode.com&#39;</tt>)</em>
       
       
         &mdash;
@@ -977,19 +1062,19 @@
       <pre class="lines">
 
 
-19
-20
-21
-22
-23</pre>
+33
+34
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 33</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_auth'>auth</span><span class='comma'>,</span><span class='id identifier rubyid_api_url'>api_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://api.printnode.com</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='ivar'>@auth</span> <span class='op'>=</span> <span class='id identifier rubyid_auth'>auth</span>
-	<span class='ivar'>@api_url</span> <span class='op'>=</span> <span class='id identifier rubyid_api_url'>api_url</span>
-	<span class='ivar'>@headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_auth'>auth</span><span class='comma'>,</span> <span class='id identifier rubyid_api_url'>api_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.printnode.com</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@auth</span> <span class='op'>=</span> <span class='id identifier rubyid_auth'>auth</span>
+  <span class='ivar'>@api_url</span> <span class='op'>=</span> <span class='id identifier rubyid_api_url'>api_url</span>
+  <span class='ivar'>@headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -997,6 +1082,54 @@
 </div>
   
 </div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="headers-instance_method">
+  
+    - (<tt>Object</tt>) <strong>headers</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute headers</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_headers'>headers</span>
+  <span class='ivar'>@headers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 
   <div id="instance_method_details" class="method_details_list">
@@ -1053,15 +1186,17 @@
       <pre class="lines">
 
 
-289
-290
-291</pre>
+271
+272
+273
+274</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 289</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 271</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_apikeys'>apikeys</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/account/apikey/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&quot;</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/account/apikey/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span>
+  <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>]</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1114,15 +1249,15 @@
       <pre class="lines">
 
 
-80
-81
-82</pre>
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_child_account_by_creator_ref'>child_account_by_creator_ref</span><span class='lparen'>(</span><span class='id identifier rubyid_creator_ref'>creator_ref</span><span class='rparen'>)</span>
-	<span class='ivar'>@headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X-Child-Account-By-CreatorRef</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_creator_ref'>creator_ref</span><span class='rbrace'>}</span>
+  <span class='ivar'>@headers</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X-Child-Account-By-CreatorRef</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_creator_ref'>creator_ref</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1175,15 +1310,15 @@
       <pre class="lines">
 
 
-73
-74
-75</pre>
+83
+84
+85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 83</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_child_account_by_email'>child_account_by_email</span><span class='lparen'>(</span><span class='id identifier rubyid_email'>email</span><span class='rparen'>)</span>
-	<span class='ivar'>@headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X-Child-Account-By-Email</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_email'>email</span><span class='rbrace'>}</span>
+  <span class='ivar'>@headers</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X-Child-Account-By-Email</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_email'>email</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1236,15 +1371,15 @@
       <pre class="lines">
 
 
-66
-67
-68</pre>
+76
+77
+78</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_child_account_by_id'>child_account_by_id</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-	<span class='ivar'>@headers</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X-Child-Account-By-Id</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span>
+  <span class='ivar'>@headers</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>X-Child-Account-By-Id</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1334,15 +1469,27 @@
       <pre class="lines">
 
 
-321
-322
-323</pre>
+306
+307
+308
+309
+310
+311
+312
+313
+314</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 321</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 306</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_clientkeys'>clientkeys</span><span class='lparen'>(</span><span class='id identifier rubyid_uuid'>uuid</span><span class='comma'>,</span><span class='id identifier rubyid_edition'>edition</span><span class='comma'>,</span><span class='id identifier rubyid_version'>version</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/client/key/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_uuid'>uuid</span><span class='rparen'>)</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>?edition=</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_edition'>edition</span><span class='rparen'>)</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&amp;version=</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_version'>version</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&quot;</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_clientkeys'>clientkeys</span><span class='lparen'>(</span><span class='id identifier rubyid_uuid'>uuid</span><span class='comma'>,</span> <span class='id identifier rubyid_edition'>edition</span><span class='comma'>,</span> <span class='id identifier rubyid_version'>version</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/client/key/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span>
+                  <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_uuid'>uuid</span><span class='rparen'>)</span> <span class='op'>+</span>
+                  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>?edition=</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span>
+                  <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_edition'>edition</span><span class='rparen'>)</span> <span class='op'>+</span>
+                  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&amp;version=</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span>
+                  <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_version'>version</span><span class='rparen'>)</span>
+  <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>]</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1352,7 +1499,7 @@
       <div class="method_details ">
   <h3 class="signature " id="clients-instance_method">
   
-    - (<tt>Object</tt>) <strong>clients</strong>(client_set = &quot;&quot;) 
+    - (<tt>Object</tt>) <strong>clients</strong>(client_set = &#39;&#39;) 
   
 
   
@@ -1383,7 +1530,7 @@ as the ones on the PrintNode API docs.</p>
         <span class='type'>(<tt>String</tt>)</span>
       
       
-        <em class="default">(defaults to: <tt>&quot;&quot;</tt>)</em>
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
       
       
         &mdash;
@@ -1409,17 +1556,19 @@ as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-343
-344
-345
-346</pre>
+335
+336
+337
+338
+339</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 343</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 335</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_clients'>clients</span><span class='lparen'>(</span><span class='id identifier rubyid_client_set'>client_set</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/download/clients/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_client_set'>client_set</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_clients'>clients</span><span class='lparen'>(</span><span class='id identifier rubyid_client_set'>client_set</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/download/clients/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_client_set'>client_set</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1429,7 +1578,7 @@ as the ones on the PrintNode API docs.</p>
       <div class="method_details ">
   <h3 class="signature " id="computers-instance_method">
   
-    - (<tt>Object</tt>) <strong>computers</strong>(computer_set = &quot;&quot;) 
+    - (<tt>Object</tt>) <strong>computers</strong>(computer_set = &#39;&#39;) 
   
 
   
@@ -1460,7 +1609,7 @@ as the ones on the PrintNode API docs.</p>
         <span class='type'>(<tt>String</tt>)</span>
       
       
-        <em class="default">(defaults to: <tt>&quot;&quot;</tt>)</em>
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
       
       
         &mdash;
@@ -1486,17 +1635,19 @@ as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-367
-368
-369
-370</pre>
+361
+362
+363
+364
+365</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 367</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 361</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_computers'>computers</span><span class='lparen'>(</span><span class='id identifier rubyid_computer_set'>computer_set</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/computers/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_computer_set'>computer_set</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_computers'>computers</span><span class='lparen'>(</span><span class='id identifier rubyid_computer_set'>computer_set</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/computers/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_computer_set'>computer_set</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1506,7 +1657,7 @@ as the ones on the PrintNode API docs.</p>
       <div class="method_details ">
   <h3 class="signature " id="create_account-instance_method">
   
-    - (<tt>Object</tt>) <strong>create_account</strong>(firstname, lastname, email, password, options = {}) 
+    - (<tt>Object</tt>) <strong>create_account</strong>(account, options = {}) 
   
 
   
@@ -1531,64 +1682,16 @@ same as the ones on the PrintNode API docs.</p>
   
     <li>
       
-        <span class='name'>firstname</span>
+        <span class='name'>account</span>
       
       
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Firstname of new user.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>lastname</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="Account.html" title="PrintNode::Account (class)">PrintNode::Account</a></span></tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Lastname of new user.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>email</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Email address of new user.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>password</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Password of new user.</p>
+<p>Account object for new user.</p>
 </div>
       
     </li>
@@ -1618,27 +1721,8 @@ same as the ones on the PrintNode API docs.</p>
     
     
     
-    
-    
-    
-    
-    
-    
     <p class="tag_title">Options Hash (<tt>options</tt>):</p>
     <ul class="option">
-      
-        <li>
-          <span class="name">:creatorRef</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>Creator reference of new user.</p>
-</div>
-          
-        </li>
       
         <li>
           <span class="name">:ApiKeys</span>
@@ -1683,49 +1767,31 @@ same as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
+198
+199
+200
+201
+202
+203
 204
 205
 206
 207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223</pre>
+208</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 204</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 198</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_create_account'>create_account</span><span class='lparen'>(</span><span class='id identifier rubyid_firstname'>firstname</span><span class='comma'>,</span><span class='id identifier rubyid_lastname'>lastname</span><span class='comma'>,</span><span class='id identifier rubyid_email'>email</span><span class='comma'>,</span><span class='id identifier rubyid_password'>password</span><span class='comma'>,</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-	<span class='id identifier rubyid_account'>account</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-	<span class='id identifier rubyid_account'>account</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>firstname</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_firstname'>firstname</span>
-	<span class='id identifier rubyid_account'>account</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>lastname</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_lastname'>lastname</span>
-	<span class='id identifier rubyid_account'>account</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>email</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_email'>email</span>
-	<span class='id identifier rubyid_account'>account</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>password</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_password'>password</span>
-	<span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-		<span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>creatorRef</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
-			<span class='id identifier rubyid_account'>account</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>creatorRef</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>creatorRef</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-			<span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>creatorRef</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-		<span class='kw'>end</span>
-		<span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
-			<span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
-		<span class='kw'>end</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Account</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_account'>account</span>
-	<span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/account/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_parse_hash_to_struct'>parse_hash_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_create_account'>create_account</span><span class='lparen'>(</span><span class='id identifier rubyid_account'>account</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Account</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_account'>account</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span>
+    <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
+      <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/account/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parse_hash_to_struct'>parse_hash_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1782,15 +1848,17 @@ same as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-299
-300
-301</pre>
+282
+283
+284
+285</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 299</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 282</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create_apikey'>create_apikey</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/account/apikey/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&quot;</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/account/apikey/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span>
+  <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>]</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1800,7 +1868,7 @@ same as the ones on the PrintNode API docs.</p>
       <div class="method_details ">
   <h3 class="signature " id="create_printjob-instance_method">
   
-    - (<tt>Object</tt>) <strong>create_printjob</strong>(printerId, title, contentType, content, source, options = {}) 
+    - (<tt>Object</tt>) <strong>create_printjob</strong>(printjob, options = {}) 
   
 
   
@@ -1824,80 +1892,16 @@ same as the ones on the PrintNode API docs.</p>
   
     <li>
       
-        <span class='name'>printerId</span>
+        <span class='name'>printjob</span>
       
       
-        <span class='type'>(<tt>int</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Id of a printer.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>title</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="PrintJob.html" title="PrintNode::PrintJob (class)">PrintNode::PrintJob</a></span></tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>title of printjob.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>contentType</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Content type of printjob.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>content</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>link to file or a link to a URL.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>source</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>source of this printjob (e.g PrintNode-Ruby)</p>
+<p>printjob object to be submitted.</p>
 </div>
       
     </li>
@@ -1923,14 +1927,6 @@ same as the ones on the PrintNode API docs.</p>
 </ul>
 
   
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -2009,39 +2005,27 @@ same as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-432
-433
-434
-435
-436
-437
-438
-439
 440
 441
 442
 443
 444
 445
-446</pre>
+446
+447
+448</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 432</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 440</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_create_printjob'>create_printjob</span><span class='lparen'>(</span><span class='id identifier rubyid_printerId'>printerId</span><span class='comma'>,</span><span class='id identifier rubyid_title'>title</span><span class='comma'>,</span><span class='id identifier rubyid_contentType'>contentType</span><span class='comma'>,</span><span class='id identifier rubyid_content'>content</span><span class='comma'>,</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-	<span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>printerId</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_printerId'>printerId</span>
-	<span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_title'>title</span>
-	<span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>contentType</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_contentType'>contentType</span>
-	<span class='id identifier rubyid_contentType'>contentType</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>base64$</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='id identifier rubyid_base64'>base64</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='const'>IO</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='id identifier rubyid_content'>content</span>
-	<span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_content'>content</span>
-	<span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>source</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_source'>source</span>
-	<span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-		<span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
-			<span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
-		<span class='kw'>end</span>
-	<span class='kw'>end</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/printjobs/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_create_printjob'>create_printjob</span><span class='lparen'>(</span><span class='id identifier rubyid_printjob'>printjob</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='id identifier rubyid_printjob'>printjob</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span>
+    <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
+      <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/printjobs/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>]</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2098,39 +2082,27 @@ same as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104</pre>
+116
+117
+118
+119
+120
+121
+122
+123
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='ivar'>@api_url</span><span class='op'>+</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_request'>request</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='op'>::</span><span class='const'>Delete</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='rparen'>)</span>
-	<span class='ivar'>@headers</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
-		<span class='id identifier rubyid_request'>request</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_basic_auth'>basic_auth</span><span class='lparen'>(</span><span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_get_credentials'>get_credentials</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_get_credentials'>get_credentials</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_hostname'>hostname</span><span class='comma'>,</span>
-							   <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span><span class='comma'>,</span>
-							   <span class='symbol'>:use_ssl</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_scheme'>scheme</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_http'>http</span><span class='op'>|</span>
-		<span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_request'>request</span><span class='rparen'>)</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_http_error_handler'>http_error_handler</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span>
+  <span class='id identifier rubyid_uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='ivar'>@api_url</span> <span class='op'>+</span> <span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='op'>::</span><span class='const'>Delete</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='rparen'>)</span>
+  <span class='ivar'>@headers</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
+    <span class='id identifier rubyid_request'>request</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_basic_auth'>basic_auth</span><span class='lparen'>(</span><span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_credentials'>credentials</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_credentials'>credentials</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_start_response'>start_response</span><span class='lparen'>(</span><span class='id identifier rubyid_request'>request</span><span class='comma'>,</span> <span class='id identifier rubyid_uri'>uri</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2180,15 +2152,15 @@ same as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-251
-252
-253</pre>
+230
+231
+232</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 251</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 230</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_account?'>delete_account?</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/account/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
+  <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/account/</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>]</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2258,15 +2230,17 @@ same as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-309
-310
-311</pre>
+293
+294
+295
+296</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 309</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 293</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_apikey?'>delete_apikey?</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/account/apikey/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
+  <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/account/apikey/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span>
+  <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>]</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2316,15 +2290,85 @@ same as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-279
-280
-281</pre>
+260
+261
+262
+263</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 279</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 260</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete_tag?'>delete_tag?</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/account/tag/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
+  <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/account/tag/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='rparen'>)</span>
+  <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>]</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="escape_with_types-instance_method">
+  
+    - (<tt>Object</tt>) <strong>escape_with_types</strong>(obj) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If an argument is not a string, map it to a string so it can be escaped and
+put into a URL.</p>
+
+<h2 id="label-Returns%3A">Returns:</h2>
+
+<p>CGI.escaped object.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>obj</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Object to be mapped into a string and escaped.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_obj'>obj</span> <span class='op'>=</span> <span class='id identifier rubyid_obj'>obj</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='kw'>unless</span> <span class='id identifier rubyid_obj'>obj</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+  <span class='const'>CGI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2381,39 +2425,27 @@ same as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126</pre>
+132
+133
+134
+135
+136
+137
+138
+139
+140</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 132</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='ivar'>@api_url</span><span class='op'>+</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_request'>request</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='op'>::</span><span class='const'>Get</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='rparen'>)</span>
-	<span class='ivar'>@headers</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
-		<span class='id identifier rubyid_request'>request</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_basic_auth'>basic_auth</span><span class='lparen'>(</span><span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_get_credentials'>get_credentials</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_get_credentials'>get_credentials</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_hostname'>hostname</span><span class='comma'>,</span>
-							   <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span><span class='comma'>,</span>
-							   <span class='symbol'>:use_ssl</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_scheme'>scheme</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_http'>http</span><span class='op'>|</span>
-		<span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_request'>request</span><span class='rparen'>)</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_http_error_handler'>http_error_handler</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span>
+  <span class='id identifier rubyid_uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='ivar'>@api_url</span> <span class='op'>+</span> <span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='op'>::</span><span class='const'>Get</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='rparen'>)</span>
+  <span class='ivar'>@headers</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
+    <span class='id identifier rubyid_request'>request</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_basic_auth'>basic_auth</span><span class='lparen'>(</span><span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_credentials'>credentials</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_credentials'>credentials</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_start_response'>start_response</span><span class='lparen'>(</span><span class='id identifier rubyid_request'>request</span><span class='comma'>,</span> <span class='id identifier rubyid_uri'>uri</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2467,31 +2499,31 @@ it will raise an error.</p>
       <pre class="lines">
 
 
-465
-466
-467
-468
-469
-470
-471
-472
 473
 474
-475</pre>
+475
+476
+477
+478
+479
+480
+481
+482
+483</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 465</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 473</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_http_error_handler'>http_error_handler</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
-	<span class='kw'>begin</span>
-		<span class='kw'>if</span><span class='lparen'>(</span><span class='kw'>not</span> <span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>^2..</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
-			<span class='id identifier rubyid_raise'>raise</span> <span class='const'>APIError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='rparen'>)</span> <span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
-		<span class='kw'>end</span>
-	<span class='kw'>rescue</span> <span class='const'>APIError</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
-		<span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HTTP Error found: </span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_object'>object</span>
-		<span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This was the body of the response: </span><span class='tstring_end'>&quot;</span></span>
-		<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span>
-	<span class='kw'>end</span>
+  <span class='kw'>begin</span>
+    <span class='kw'>unless</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>^2..</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_fail'>fail</span> <span class='const'>APIError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_code'>code</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
+    <span class='kw'>end</span>
+  <span class='kw'>rescue</span> <span class='const'>APIError</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HTTP Error found: </span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_object'>object</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>This was the body of the response: </span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2501,7 +2533,7 @@ it will raise an error.</p>
       <div class="method_details ">
   <h3 class="signature " id="latest_client-instance_method">
   
-    - (<tt>Object</tt>) <strong>latest_client</strong>(os = &quot;windows&quot;) 
+    - (<tt>Object</tt>) <strong>latest_client</strong>(os = &#39;windows&#39;) 
   
 
   
@@ -2532,7 +2564,7 @@ same as the ones on the PrintNode API docs.</p>
         <span class='type'>(<tt>String</tt>)</span>
       
       
-        <em class="default">(defaults to: <tt>&quot;windows&quot;</tt>)</em>
+        <em class="default">(defaults to: <tt>&#39;windows&#39;</tt>)</em>
       
       
         &mdash;
@@ -2558,15 +2590,17 @@ same as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-332
-333
-334</pre>
+323
+324
+325
+326</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 332</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 323</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_latest_client'>latest_client</span><span class='lparen'>(</span><span class='id identifier rubyid_os'>os</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>windows</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='const'>OpenStruct</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/download/client/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_os'>os</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_latest_client'>latest_client</span><span class='lparen'>(</span><span class='id identifier rubyid_os'>os</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>windows</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/download/client/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_os'>os</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='rparen'>)</span>
+  <span class='const'>OpenStruct</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2646,20 +2680,7 @@ same as the ones on the PrintNode API docs.</p>
           </span>
           
             &mdash; <div class='inline'>
-<p>new Lastname of user.</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">:password</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>new Password of user.</p>
+<p>new <a href="0">Last+‘]’)</a>ions [String] :password new Password of user.</p>
 </div>
           
         </li>
@@ -2707,29 +2728,19 @@ same as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-236
-237
-238
-239
-240
-241
-242
-243
-244
-245</pre>
+220
+221
+222
+223
+224</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 236</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 220</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_modify_account'>modify_account</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-	<span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-		<span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
-			<span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
-		<span class='kw'>end</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_patch'>patch</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/account/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_parse_hash_to_struct'>parse_hash_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_patch'>patch</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/account/</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parse_hash_to_struct'>parse_hash_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2802,17 +2813,19 @@ same as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-355
-356
-357
-358</pre>
+348
+349
+350
+351
+352</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 355</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 348</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_modify_client_downloads'>modify_client_downloads</span><span class='lparen'>(</span><span class='id identifier rubyid_client_set'>client_set</span><span class='comma'>,</span><span class='id identifier rubyid_enabled'>enabled</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_enabled'>enabled</span><span class='rbrace'>}</span>
-	<span class='kw'>return</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_patch'>patch</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/download/clients/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_client_set'>client_set</span><span class='rparen'>)</span><span class='comma'>,</span><span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_modify_client_downloads'>modify_client_downloads</span><span class='lparen'>(</span><span class='id identifier rubyid_client_set'>client_set</span><span class='comma'>,</span> <span class='id identifier rubyid_enabled'>enabled</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>enabled</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_enabled'>enabled</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/download/clients/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_client_set'>client_set</span><span class='rparen'>)</span>
+  <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_patch'>patch</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='comma'>,</span> <span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2869,35 +2882,35 @@ same as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43</pre>
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_array'>array</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-	<span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='op'>|</span>
-		<span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_h'>h</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span><span class='rparen'>)</span>
-			<span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_parse_hash_to_struct'>parse_hash_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_h'>h</span><span class='rparen'>)</span><span class='rparen'>)</span>
-		<span class='kw'>elsif</span><span class='lparen'>(</span><span class='id identifier rubyid_h'>h</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span><span class='rparen'>)</span>
-			<span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_h'>h</span><span class='rparen'>)</span><span class='rparen'>)</span>
-		<span class='kw'>else</span>
-			<span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_h'>h</span><span class='rparen'>)</span>
-		<span class='kw'>end</span>
-	<span class='kw'>end</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_output'>output</span>
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_array'>array</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_h'>h</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_parse_hash_to_struct'>parse_hash_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_h'>h</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_h'>h</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_h'>h</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_h'>h</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_output'>output</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2956,31 +2969,23 @@ OpenStructs.</p>
       <pre class="lines">
 
 
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61</pre>
+65
+66
+67
+68
+69
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_hash_to_struct'>parse_hash_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
-		<span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span><span class='rparen'>)</span>
-			<span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_hash_to_struct'>parse_hash_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span>
-		<span class='kw'>end</span>
-		<span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span><span class='rparen'>)</span>
-			<span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span>
-		<span class='kw'>end</span>
-	<span class='kw'>end</span>
-	<span class='kw'>return</span> <span class='const'>OpenStruct</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='id identifier rubyid_hash'>hash</span>
+  <span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
+    <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_hash_to_struct'>parse_hash_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='const'>OpenStruct</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='id identifier rubyid_hash'>hash</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3056,47 +3061,31 @@ body of the request.</p>
       <pre class="lines">
 
 
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
 149
 150
 151
 152
-153</pre>
+153
+154
+155
+156
+157
+158
+159</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 135</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 149</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_patch'>patch</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='ivar'>@api_url</span><span class='op'>+</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_request'>request</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='op'>::</span><span class='const'>Patch</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='id identifier rubyid_uri'>uri</span>
-	<span class='ivar'>@headers</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
-		<span class='id identifier rubyid_request'>request</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_basic_auth'>basic_auth</span><span class='lparen'>(</span><span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_get_credentials'>get_credentials</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_get_credentials'>get_credentials</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_request'>request</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Content-Type</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>application/json</span><span class='tstring_end'>&quot;</span></span>
-	<span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
-		<span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_hostname'>hostname</span><span class='comma'>,</span>
-							   <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span><span class='comma'>,</span>
-							   <span class='symbol'>:use_ssl</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_scheme'>scheme</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_http'>http</span><span class='op'>|</span>
-		<span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_request'>request</span><span class='rparen'>)</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_http_error_handler'>http_error_handler</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_patch'>patch</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='ivar'>@api_url</span> <span class='op'>+</span> <span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='op'>::</span><span class='const'>Patch</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='id identifier rubyid_uri'>uri</span>
+  <span class='ivar'>@headers</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
+    <span class='id identifier rubyid_request'>request</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_basic_auth'>basic_auth</span><span class='lparen'>(</span><span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_credentials'>credentials</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_credentials'>credentials</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Content-Type</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>application/json</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span> <span class='kw'>if</span> <span class='id identifier rubyid_data'>data</span>
+  <span class='id identifier rubyid_start_response'>start_response</span><span class='lparen'>(</span><span class='id identifier rubyid_request'>request</span><span class='comma'>,</span> <span class='id identifier rubyid_uri'>uri</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3172,12 +3161,6 @@ body of the request.</p>
       <pre class="lines">
 
 
-162
-163
-164
-165
-166
-167
 168
 169
 170
@@ -3188,31 +3171,21 @@ body of the request.</p>
 175
 176
 177
-178
-179
-180</pre>
+178</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 162</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 168</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='ivar'>@api_url</span><span class='op'>+</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_request'>request</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='op'>::</span><span class='const'>Post</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='id identifier rubyid_uri'>uri</span>
-	<span class='ivar'>@headers</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span><span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
-		<span class='id identifier rubyid_request'>request</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_basic_auth'>basic_auth</span><span class='lparen'>(</span><span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_get_credentials'>get_credentials</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_get_credentials'>get_credentials</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_request'>request</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Content-Type</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>application/json</span><span class='tstring_end'>&quot;</span></span>
-	<span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
-		<span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_hostname'>hostname</span><span class='comma'>,</span>
-							   <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span><span class='comma'>,</span>
-							   <span class='symbol'>:use_ssl</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_scheme'>scheme</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_http'>http</span><span class='op'>|</span>
-		<span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_request'>request</span><span class='rparen'>)</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_http_error_handler'>http_error_handler</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_response'>response</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='lparen'>(</span><span class='ivar'>@api_url</span> <span class='op'>+</span> <span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='op'>::</span><span class='const'>Post</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='id identifier rubyid_uri'>uri</span>
+  <span class='ivar'>@headers</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
+    <span class='id identifier rubyid_request'>request</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_v'>v</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_basic_auth'>basic_auth</span><span class='lparen'>(</span><span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_credentials'>credentials</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='ivar'>@auth</span><span class='period'>.</span><span class='id identifier rubyid_credentials'>credentials</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Content-Type</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>application/json</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span> <span class='kw'>if</span> <span class='id identifier rubyid_data'>data</span>
+  <span class='id identifier rubyid_start_response'>start_response</span><span class='lparen'>(</span><span class='id identifier rubyid_request'>request</span><span class='comma'>,</span> <span class='id identifier rubyid_uri'>uri</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3222,7 +3195,7 @@ body of the request.</p>
       <div class="method_details ">
   <h3 class="signature " id="printers-instance_method">
   
-    - (<tt>Object</tt>) <strong>printers</strong>(set_a = &quot;&quot;, set_b = nil) 
+    - (<tt>Object</tt>) <strong>printers</strong>(set_a = &#39;&#39;, set_b = nil) 
   
 
   
@@ -3256,7 +3229,7 @@ as the ones on the PrintNode API docs.</p>
         <span class='type'>(<tt>String</tt>)</span>
       
       
-        <em class="default">(defaults to: <tt>&quot;&quot;</tt>)</em>
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
       
       
         &mdash;
@@ -3300,27 +3273,33 @@ as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-386
-387
-388
-389
-390
-391
 392
 393
-394</pre>
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 386</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 392</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_printers'>printers</span><span class='lparen'>(</span><span class='id identifier rubyid_set_a'>set_a</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='id identifier rubyid_set_b'>set_b</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
-	<span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_set_b'>set_b</span><span class='rparen'>)</span>
-		<span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/computers/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_set_a'>set_a</span><span class='rparen'>)</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/printers/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_set_b'>set_b</span><span class='rparen'>)</span>
-	<span class='kw'>else</span>
-		<span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/printers/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_set_a'>set_a</span><span class='rparen'>)</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_printers'>printers</span><span class='lparen'>(</span><span class='id identifier rubyid_set_a'>set_a</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_set_b'>set_b</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_set_b'>set_b</span>
+    <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/computers/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span>
+                    <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_set_a'>set_a</span><span class='rparen'>)</span> <span class='op'>+</span>
+                    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/printers/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span>
+                    <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_set_b'>set_b</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/printers/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_set_a'>set_a</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3330,7 +3309,7 @@ as the ones on the PrintNode API docs.</p>
       <div class="method_details ">
   <h3 class="signature " id="printjobs-instance_method">
   
-    - (<tt>Object</tt>) <strong>printjobs</strong>(set_a = &quot;&quot;, set_b = nil) 
+    - (<tt>Object</tt>) <strong>printjobs</strong>(set_a = &#39;&#39;, set_b = nil) 
   
 
   
@@ -3364,7 +3343,7 @@ as the ones on the PrintNode API docs.</p>
         <span class='type'>(<tt>String</tt>)</span>
       
       
-        <em class="default">(defaults to: <tt>&quot;&quot;</tt>)</em>
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
       
       
         &mdash;
@@ -3408,27 +3387,33 @@ as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-406
-407
-408
-409
-410
-411
-412
-413
-414</pre>
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 406</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 415</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_printjobs'>printjobs</span><span class='lparen'>(</span><span class='id identifier rubyid_set_a'>set_a</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='id identifier rubyid_set_b'>set_b</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
-	<span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_set_b'>set_b</span><span class='rparen'>)</span>
-		<span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/printers/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_set_a'>set_a</span><span class='rparen'>)</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/printjobs/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_set_b'>set_b</span><span class='rparen'>)</span>
-	<span class='kw'>else</span>
-		<span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/printjobs/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_set_a'>set_a</span><span class='rparen'>)</span>
-	<span class='kw'>end</span>
-	<span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_printjobs'>printjobs</span><span class='lparen'>(</span><span class='id identifier rubyid_set_a'>set_a</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_set_b'>set_b</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_set_b'>set_b</span>
+    <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/printers/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span>
+                    <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_set_a'>set_a</span><span class='rparen'>)</span> <span class='op'>+</span>
+                    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/printjobs/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span>
+                    <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_set_b'>set_b</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/printjobs/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_set_a'>set_a</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3444,23 +3429,72 @@ as the ones on the PrintNode API docs.</p>
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sends a GET request to /computer/(computer_id)/scales</p>
+
+<h2 id="label-Returns%3A">Returns:</h2>
+
+<p>An Array of OpenStruct objects. The design of this Object will be the same
+as the ones on the PrintNode API docs.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>computer_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a set of computers to be got.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://www.printnode.com/docs/api/curl/#scales" target="_parent" title="Scales on API Docs">Scales on API Docs</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-372
-373
 374
-375</pre>
+375
+376
+377
+378
+379
+380</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 372</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 374</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_scales'>scales</span><span class='lparen'>(</span><span class='id identifier rubyid_computer_id'>computer_id</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/computer/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_computer_id'>computer_id</span><span class='rparen'>)</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/scales/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/computer/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span>
+                  <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_computer_id'>computer_id</span><span class='rparen'>)</span> <span class='op'>+</span>
+                  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/scales/</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3483,8 +3517,8 @@ as the ones on the PrintNode API docs.</p>
 
 <h2 id="label-Returns%3A">Returns:</h2>
 
-<p>If this creates a tag, a String “created” will be returned. If it updates
-one, “updated” will be returned.</p>
+<p>If this creates a tag,  a String &#39;created&#39; will be returned. If it
+updates one,  &#39;updated&#39; will be returned.</p>
 
 
   </div>
@@ -3534,15 +3568,94 @@ one, “updated” will be returned.</p>
       <pre class="lines">
 
 
-271
-272
-273</pre>
+251
+252
+253
+254</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 271</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 251</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_set_tag'>set_tag</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='comma'>,</span><span class='id identifier rubyid_tag_value'>tag_value</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/account/tag/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='rparen'>)</span><span class='comma'>,</span><span class='id identifier rubyid_tag_value'>tag_value</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&quot;</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_set_tag'>set_tag</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='comma'>,</span> <span class='id identifier rubyid_tag_value'>tag_value</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/account/tag/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='rparen'>)</span>
+  <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='comma'>,</span> <span class='id identifier rubyid_tag_value'>tag_value</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>]</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_response-instance_method">
+  
+    - (<tt>Object</tt>) <strong>start_response</strong>(request, uri) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a response object out of a Net::HTTP::(request method).</p>
+
+<h2 id="label-Returns%3A">Returns:</h2>
+
+<p>The response of this request.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>request</span>
+      
+      
+        <span class='type'>(<tt>Net::HTTPGenericRequest</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>request to be done.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+100
+101
+102
+103
+104
+105
+106
+107
+108</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 100</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_response'>start_response</span><span class='lparen'>(</span><span class='id identifier rubyid_request'>request</span><span class='comma'>,</span> <span class='id identifier rubyid_uri'>uri</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Net</span><span class='op'>::</span><span class='const'>HTTP</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_hostname'>hostname</span><span class='comma'>,</span>
+                             <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_port'>port</span><span class='comma'>,</span>
+                             <span class='label'>use_ssl:</span> <span class='id identifier rubyid_uri'>uri</span><span class='period'>.</span><span class='id identifier rubyid_scheme'>scheme</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_http'>http</span><span class='op'>|</span>
+    <span class='id identifier rubyid_http'>http</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_request'>request</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_http_error_handler'>http_error_handler</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3552,7 +3665,7 @@ one, “updated” will be returned.</p>
       <div class="method_details ">
   <h3 class="signature " id="states-instance_method">
   
-    - (<tt>Object</tt>) <strong>states</strong>(printjob_set = &quot;&quot;) 
+    - (<tt>Object</tt>) <strong>states</strong>(printjob_set = &#39;&#39;) 
   
 
   
@@ -3583,7 +3696,7 @@ as the ones on the PrintNode API docs.</p>
         <span class='type'>(<tt>String</tt>)</span>
       
       
-        <em class="default">(defaults to: <tt>&quot;&quot;</tt>)</em>
+        <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
       
       
         &mdash;
@@ -3609,19 +3722,31 @@ as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-455
-456
 457
 458
-459</pre>
+459
+460
+461
+462
+463
+464
+465
+466
+467</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 455</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 457</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_states'>states</span><span class='lparen'>(</span><span class='id identifier rubyid_printjob_set'>printjob_set</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_printjob_set'>printjob_set</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>?</span> <span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/printjobs/states/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/printjobs/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_printjob_set'>printjob_set</span><span class='rparen'>)</span><span class='op'>+</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/states/</span><span class='tstring_end'>&quot;</span></span>
-	<span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_states'>states</span><span class='lparen'>(</span><span class='id identifier rubyid_printjob_set'>printjob_set</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_printjob_set'>printjob_set</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/printjobs/states/</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/printjobs/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span>
+                    <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_printjob_set'>printjob_set</span><span class='rparen'>)</span> <span class='op'>+</span>
+                    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/states/</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_response_object'>response_object</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parse_array_to_struct'>parse_array_to_struct</span><span class='lparen'>(</span><span class='id identifier rubyid_response_object'>response_object</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3678,15 +3803,17 @@ as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-261
-262
-263</pre>
+240
+241
+242
+243</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 261</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 240</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tags'>tags</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='rparen'>)</span>
-	<span class='kw'>return</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/account/tag/</span><span class='tstring_end'>&quot;</span></span><span class='op'>+</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&quot;</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_end_point_url'>end_point_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/account/tag/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_escape_with_types'>escape_with_types</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='rparen'>)</span>
+  <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>[</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_end_point_url'>end_point_url</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>]</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3731,15 +3858,15 @@ same as the ones on the PrintNode API docs.</p>
       <pre class="lines">
 
 
-187
-188
-189</pre>
+185
+186
+187</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 187</span>
+      <pre class="code"><span class="info file"># File 'lib/printnode/client.rb', line 185</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_whoami'>whoami</span>
-	<span class='kw'>return</span> <span class='const'>OpenStruct</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/whoami/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
+  <span class='const'>OpenStruct</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/whoami/</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3751,7 +3878,7 @@ same as the ones on the PrintNode API docs.</p>
 </div>
 
     <div id="footer">
-  Generated on Tue Jul 28 15:59:22 2015 by
+  Generated on Thu Aug  6 09:44:35 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.2).
 </div>

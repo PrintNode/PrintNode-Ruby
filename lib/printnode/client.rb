@@ -10,6 +10,14 @@ module PrintNode
   # @author Jake Torrance
   # @author PrintNode
   class Client
+
+    # If an argument is not a string, map it to a string so it can be escaped
+    # and put into a URL.
+    #
+    # @param obj Object to be mapped into a string and escaped.
+    #
+    # == Returns:
+    # CGI.escaped object.
     def escape_with_types(obj)
       obj = obj.to_s unless obj.is_a?(String)
       CGI.escape(obj)
@@ -356,6 +364,13 @@ module PrintNode
       parse_array_to_struct(response_object)
     end
 
+    # Sends a GET request to /computer/(computer_id)/scales
+    #
+    # @param computer_id [String] a set of computers to be got.
+    #
+    # == Returns:
+    # An Array of OpenStruct objects. The design of this Object will be the same as the ones on the PrintNode API docs.
+    # @see https://www.printnode.com/docs/api/curl/#scales Scales on API Docs
     def scales(computer_id)
       end_point_url = '/computer/' +
                       escape_with_types(computer_id) +
@@ -363,6 +378,7 @@ module PrintNode
       response_object = JSON.parse(get(end_point_url).body)
       parse_array_to_struct(response_object)
     end
+
     # Sends a GET request to /printers/(set_a), or:
     # /computers/(set_a)/printers/(set_b) if set_b is used.
     #

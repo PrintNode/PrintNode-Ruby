@@ -10,6 +10,6 @@ Gem::Specification.new do |s|
 	s.homepage				= "https://www.printnode.com"
 	s.license				= "MIT"
 	s.post_install_message 	= "Happy Printing!"
-	s.add_development_dependency 'json'
-	s.add_development_dependency 'test-unit'
+    s.add_development_dependency 'json', '>=0'
+    s.add_development_dependency 'test-unit', '>=0'
 end
