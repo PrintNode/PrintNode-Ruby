@@ -17,7 +17,7 @@ module PrintNode
       hash['title'] = @title
       hash['contentType'] = @content_type
       if @content_type.match('base64$')
-        hash ['content'] = base64.encode(IO.read(@content))
+        hash ['content'] = Base64.encode64(IO.read(@content))
       else
         hash ['content'] = @content
       end
