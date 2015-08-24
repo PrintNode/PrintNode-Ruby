@@ -1,4 +1,4 @@
-# PrintNode-Ruby
+# PrintNode-Ruby [![Gem Version](https://badge.fury.io/rb/printnode.svg)](http://badge.fury.io/rb/printnode)
 
 PrintNode is a cloud printing service which allows you to connect any printer to your applicatino using our PrintNode Client and easy to use JSON API.
 
