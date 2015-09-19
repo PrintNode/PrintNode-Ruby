@@ -1,4 +1,3 @@
-require 'base64'
 module PrintNode
   # An object for printjob creation.
   # @author Jake Torrance
@@ -16,11 +15,7 @@ module PrintNode
       hash['printerId'] = @printer_id
       hash['title'] = @title
       hash['contentType'] = @content_type
-      if @content_type.match('base64$')
-        hash ['content'] = Base64.encode64(IO.read(@content))
-      else
-        hash ['content'] = @content
-      end
+      hash['content'] = @content
       hash['source'] = @source
       hash
     end
