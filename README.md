@@ -41,4 +41,4 @@ myPrinters = client.printers
 
 ##Docs
 
-a Ruby *yardoc* is included in PrintNode-Ruby/doc/
+a Ruby *yardoc* is included in PrintNode-Ruby/doc/ and are also available [online.](http://www.rubydoc.info/github/PrintNode/PrintNode-Ruby)
