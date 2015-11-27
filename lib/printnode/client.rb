@@ -2,7 +2,6 @@ require 'net/https'
 require 'uri'
 require 'json'
 require 'ostruct'
-require 'base64'
 require 'cgi'
 
 module PrintNode
