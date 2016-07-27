@@ -2,7 +2,6 @@ require 'net/https'
 require 'uri'
 require 'json'
 require 'ostruct'
-require 'base64'
 require 'cgi'
 
 module PrintNode
@@ -10,6 +9,8 @@ module PrintNode
   # @author Jake Torrance
   # @author PrintNode
   class Client
+
+    attr_reader :headers
 
     # If an argument is not a string, map it to a string so it can be escaped
     # and put into a URL.
@@ -23,7 +24,6 @@ module PrintNode
       CGI.escape(obj)
     end
 
-    attr_reader :headers
     # Initializes auth object, api url and headers.
     #
     # @param auth [PrintNode::Auth] auth object with credentials.

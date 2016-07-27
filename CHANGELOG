@@ -2,3 +2,4 @@
 1.0.1 -> 1.0.3 major changes that are incorrectly versioned.
 1.0.4 Reverting changes from 1.0.1 -> 1.0.3
 1.0.5 Fix for base64 encoded PrintJobs - now correctly encodes the printjob.
+1.0.6 Allow passing a base64 encoded string to a printjob instead of a file path
