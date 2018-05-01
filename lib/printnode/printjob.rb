@@ -22,20 +22,33 @@ module PrintNode
 
     # Maps the object into a hash ready for JSON Encoding.
     def to_hash
-      hash = {}
-      hash['printerId'] = @printer_id
-      hash['title'] = @title
-      hash['contentType'] = @content_type
+      {
+          'printerId' => @printer_id,
+          'title' => @title,
+          'contentType' => @content_type,
+          'content' => load_content,
+          'source' => @source
+      }
+    end
+
+    def load_content
       # Used to be, we only supported file names for Base64, but it's actually better
       # to allow the user to send us a data string if they desire.  Testing the
       # content to see if it's a path allows for backwards compatibility
-      if @content_type.match('base64$') && File.exist?(@content)
-        hash ['content'] = Base64.encode64(IO.read(@content))
+      if @content_type.match('base64$') && content_is_existing_file?
+        Base64.encode64(IO.read(@content))
       else
-        hash ['content'] = @content
+        @content
       end
-      hash['source'] = @source
-      hash
     end
+
+    def content_is_existing_file?
+        begin
+            File.exist?(@content)
+        rescue
+            false
+        end
+    end
+
   end
 end
