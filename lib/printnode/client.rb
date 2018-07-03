@@ -100,7 +100,7 @@ module PrintNode
     def start_response(request, uri)
       response = Net::HTTP.start(uri.hostname,
                                  uri.port,
-                                 use_ssl: uri.scheme = 'https') do |http|
+                                 use_ssl: uri.scheme == 'https') do |http|
         http.request(request)
       end
       http_error_handler(response)
