@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name          = "printnode"
-  s.version       = "1.0.6"
-  s.date          = "2015-08-19"
+  s.version       = "1.0.7"
+  s.date          = "2018-06-18"
   s.summary       = "PrintNode-Ruby"
   s.description   = "Ruby API Library for PrintNode remote printing service."
-  s.authors       = ["PrintNode","Jake Torrance"]
+  s.authors       = ["PrintNode"]
   s.email         = ["support@printnode.com"]
   s.files         = ["lib/printnode.rb","lib/printnode/client.rb","lib/printnode/api_exception.rb","lib/printnode/auth.rb","lib/printnode/account.rb","lib/printnode/printjob.rb"]
   s.homepage      = "https://www.printnode.com"
