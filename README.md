@@ -4,24 +4,24 @@ PrintNode is a cloud printing service which allows you to connect any printer to
 
 This quick start guide covers using the Ruby API Library. There are examples to show how to use the API Library. It assumes that you have a [PrintNode](https://www.printnode.com) account.
 
-##Installation
+## Installation
 
-###Prerequisites
+### Prerequisites
 
 * Ruby 1.9.x or Ruby 2.x.x
 * rubygems
 
-###Installing from rubygems
+### Installing from rubygems
 Simply install via `gem install printnode` with root privileges.
 
-###Building and installing from gemspec
+### Building and installing from gemspec
 Firstly, you need to build the gem via:
 ```bash
 gem build printnode.gemspec
 ```
 Then install it via `gem install printnode-x.x.x.gem` with root privileges.
 
-##Quick Start
+## Quick Start
 
 Firstly, make sure you require the library when using the code:
 
@@ -39,6 +39,6 @@ myComputers = client.computers
 myPrinters = client.printers
 ```
 
-##Docs
+## Docs
 
 a Ruby *yardoc* is included in PrintNode-Ruby/doc/ and are also available [online.](http://www.rubydoc.info/github/PrintNode/PrintNode-Ruby)
