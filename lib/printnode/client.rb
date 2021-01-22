@@ -439,11 +439,7 @@ module PrintNode
     # @see https://www.printnode.com/docs/api/curl#printjob-options PrintJob options on API Docs
     def create_printjob(printjob, options = {})
       hash = printjob.to_hash
-      if options
-        options.each do |(k, v)|
-          hash[k] = v
-        end
-      end
+      hash["options"] = options if options
       JSON.parse('[' + post('/printjobs/', hash).body + ']')[0]
     end
 
