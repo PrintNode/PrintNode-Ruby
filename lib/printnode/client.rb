@@ -9,6 +9,8 @@ module PrintNode
   # @author Jake Torrance
   # @author PrintNode
   class Client
+    DEFAULT_OPEN_TIMEOUT = 5.freeze
+    DEFAULT_READ_TIMEOUT = 30.freeze
 
     attr_reader :headers
 
@@ -30,10 +32,11 @@ module PrintNode
     # @param api_url [String] api_url to be used in requests.
     #
     # @see PrintNode::Auth
-    def initialize(auth, api_url = 'https://api.printnode.com')
+    def initialize(auth, api_url = 'https://api.printnode.com', options = {})
       @auth = auth
       @api_url = api_url
       @headers = {}
+      @options = options
     end
 
     # parses any hashes in an array to OpenStructs.
@@ -100,7 +103,9 @@ module PrintNode
     def start_response(request, uri)
       response = Net::HTTP.start(uri.hostname,
                                  uri.port,
-                                 use_ssl: uri.scheme == 'https') do |http|
+                                 use_ssl: uri.scheme == 'https',
+                                 open_timeout: @options.fetch(:open_timeout, DEFAULT_OPEN_TIMEOUT),
+                                 read_timeout: @options.fetch(:read_timeout, DEFAULT_READ_TIMEOUT)) do |http|
         http.request(request)
       end
       http_error_handler(response)
